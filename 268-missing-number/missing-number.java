@@ -1,16 +1,14 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int xorSum = 0;
 
-        //xorSum with array elements
-        for(int n: nums){
-            xorSum = xorSum^n;
+        int sum =0;
+        for( int i =0;i<=nums.length;i++){
+            sum+=i;
+
         }
-        //xorSum with range elements
-        int n = nums.length;
-        for(int i =0;i<=n;i++){
-            xorSum = xorSum^i;
-        }
-        return xorSum;
+        int newsum=0;
+        for(int j=0;j<nums.length;j++){
+            newsum+=nums[j];
+        }return sum-newsum;
     }
 }
